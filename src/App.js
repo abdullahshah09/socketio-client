@@ -102,7 +102,7 @@ const App = () => {
 
   useEffect(() => {
 
-    socketRef.current = io.connect('/chat');
+    socketRef.current = io.connect('/');
 
     socketRef.current.on("your id", id => {
       setYourID(id);
