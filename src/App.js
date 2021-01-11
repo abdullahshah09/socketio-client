@@ -91,6 +91,8 @@ const PartnerMessage = styled.div`
   border-bottom-left-radius: 10%;
 `;
 
+
+
 const App = () => {
   const [yourID, setYourID] = useState();
   const [messages, setMessages] = useState([]);
@@ -99,7 +101,8 @@ const App = () => {
   const socketRef = useRef();
 
   useEffect(() => {
-    socketRef.current = io.connect('/');
+
+    socketRef.current = io.connect('/chat');
 
     socketRef.current.on("your id", id => {
       setYourID(id);
