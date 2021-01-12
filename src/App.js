@@ -102,7 +102,7 @@ const App = () => {
 
   useEffect(() => {
 
-    socketRef.current = io.connect('/');
+    socketRef.current = io.connect('https://websocketio-rtc.herokuapp.com/');
 
     socketRef.current.on("your id", id => {
       setYourID(id);
